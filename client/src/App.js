@@ -4,10 +4,10 @@ import { useEffect } from "react";
 import { loginSuccess } from "./pages/userSlice";
 
 //Pages
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Profile from "./pages/Profile";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const { user } = useSelector((state) => state.user);

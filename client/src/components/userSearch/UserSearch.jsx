@@ -7,7 +7,7 @@ import axios from 'axios';
 
 export default function UserSearch() {
     const user = useSelector((state) => state.user.user);
-    const [followingList, setFollowingList] = useState([]);
+    const [followingsList, setFollowingsList] = useState([]);
     const [searchUserName, setSearchUserName] = useState("");
     const [error, setError] = useState(false);
     const [searchedUser, setSearchedUser] = useState(null);
@@ -24,6 +24,14 @@ export default function UserSearch() {
         };
         fetchFollowingList();
     }, [user]);
+
+    // function to convert an image to base64
+    function convertImageFormat(convertUser) {
+        // convert the image to base64
+        let base64String = convertUser.profilePicture.split(",");
+        // return the base64 string
+        return base64String[1];
+    }
 
     // handle user search submit
     function handleUserSearchSubmit(e) {

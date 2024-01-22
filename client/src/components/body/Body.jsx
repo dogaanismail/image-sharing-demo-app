@@ -22,6 +22,7 @@ export default function Body({ username, page }) {
                 })
             );
         }
+        fetchPosts();
     }, [username, user._id]);
 
 
